@@ -7,12 +7,12 @@ export default class Board {
     const board = rows.map((row) => row
       .split(' ')
       .map((item) => new Cell(+item)));
-    return new Board(board);
+    return new Board(0, 0, board);
   }
 
-  constructor(m, n) {
-    if (typeof m === 'object') {
-      this.board = m;
+  constructor(m, n, board) {
+    if (board !== undefined) {
+      this.board = board;
     } else {
       this.board = Array(m).fill(Array(n).fill(null))
         .map((row) => row
@@ -20,6 +20,7 @@ export default class Board {
             () => new Cell(getRandomCellValue()),
           ));
     }
+    this.renderCounter = 0;
   }
 
   getNeighbors(row, coll) {
@@ -82,7 +83,9 @@ export default class Board {
 
   render() {
     const string = this.board.map((row) => row.join(' ')).join('\n');
-    console.log('New state');
+    console.log('---! New state !---');
+    // eslint-disable-next-line no-plusplus
+    console.log(`--- Render # ${this.renderCounter++} ---`);
     console.log(string);
   }
 

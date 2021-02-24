@@ -1,6 +1,19 @@
-## Условия задачи
-Для того, чтобы мы могли лучше познакомиться с вашим уровнем знаний, выполните задание на JavaScript.
+### Local install
+```sh
+make publish
+npm link
+```
 
+#### Generate a random board <rows> <colls>
+`$ board generate 100 100`
+
+#### Generate board from file(no extension!)
+
+`$ board file <pathToFile>`
+
+[![asciicast](https://asciinema.org/a/v3GwZ7Oa6yMJx5ImIGqYKTeR2.svg)](https://asciinema.org/a/v3GwZ7Oa6yMJx5ImIGqYKTeR2)
+
+## Условия задачи
 Дана доска размером M × N клеток. Клетка может находиться в одном из двух состояний: 1 — живая, 0 — мёртвая. Каждая клетка взаимодействует с восемью соседями. Правила таковы:
 
 Живая клетка, у которой меньше двух живых соседей, погибает.

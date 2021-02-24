@@ -2,10 +2,13 @@ install:
 	npm install
 
 start:
-	node src/index.js
+	node bin/board.js
 
 test:
 	npm test
 
 lint:
 	npx eslint .
+
+publish:
+	npm publish --dry-run
