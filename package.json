@@ -9,6 +9,10 @@
   },
   "author": "Vladimir Zhigalev",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:maradondt/test-job-ya.git"
+  },
   "devDependencies": {
     "eslint": "^7.20.0",
     "eslint-config-airbnb-base": "^14.2.1",
