@@ -1,5 +1,6 @@
 ### Local install
 ```sh
+make install
 make publish
 npm link
 ```
